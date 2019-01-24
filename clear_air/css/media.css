@@ -1,0 +1,182 @@
+@media (max-width:960px) {
+    
+.foto {
+    max-height: 750px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 800px;
+    padding-top: 46%;
+} 
+        
+.gallery label {
+    min-width: 90px; 
+    margin-left: 6px;
+}
+
+.partner-blur {
+    min-height: 500px;
+    height: 100%;
+}
+
+.partner-img { 
+    max-width: 700px;
+    width: 100%;  
+} 
+
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.phone {
+    max-width: 300px;
+    width: 100%;
+}
+
+}
+
+@media (max-width:768px) {
+
+.about-foto img{
+    /* visibility: hidden; */
+    display: none;
+}
+
+.foto {
+    max-height: 750px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 550px;
+    padding-top: 46%;
+} 
+        
+.gallery label {
+    min-width: 90px; 
+    margin-left: 6px;
+}
+}
+
+@media (max-width:480px) {
+
+
+header {
+    padding: 6px;
+}
+    
+.logo {
+    font-size: 20px;
+}
+
+.nav-item {
+    display: none;
+}
+
+.overlay-video {
+    max-width: 300px;
+    width: 100%;
+    border-radius: 30px 0;
+}
+    
+.logo-img {
+    max-height: 50px;
+}
+    
+.logo-name {
+    padding: 0 10px;
+    color: white;
+}
+    
+.title {
+    font-size: 14px;
+}
+    
+.sub-title {
+    margin: 0;
+    font-size: 12px;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+h3::after {
+    top: 100px;
+}
+
+.about-kom {
+    font-size: 14px;
+    text-align: center;
+    padding-left: -20px;
+}
+
+.about-block {
+    padding: 0 10px;
+}
+
+.block {
+    padding: 10px;
+    margin: 0 0 10px;
+    justify-content: center;
+}
+
+.romb {
+    display: none;
+}
+
+.projects-item-1:hover, .projects-item-2:hover, 
+.projects-item-3:hover {
+    transform: none;
+}
+
+h4 {
+    font-size: 14px;    
+}
+
+.foto-wrap {
+    max-width: 300px;
+    min-height: 100px;
+    padding: 0 0 10px;
+}
+
+.gallery {
+    max-width: 200px ;
+    width: 100%;
+    background-size: 2%;
+    background: 10% 10%; 
+    padding-top: 50%;
+}        
+
+.gallery label {
+	min-width: 16px; 
+    min-height: 12px;
+}
+
+.gallery label:before { 
+    position: absolute; 
+    top: 20%; 
+    border-width: 50px 25px; 
+    border-style: solid;
+}
+
+.partner-img h3::after {
+    top: 120px;
+}
+
+.partner-img h4 {
+    display: none;
+}
+
+.partner-blur {
+    min-height: 650px;
+    height: 100%;
+
+}
+}
