@@ -1,14 +1,12 @@
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
-
 }
   
 body {
     margin: 0;
     background-image: url(https://russianpulse.ru/img/http://cont.ws/uploads/posts2/396271.jpg); 
     background-size: cover; 
-    width: 100%;  
     background-repeat: no-repeat;
 }
   
@@ -39,6 +37,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-content: center;
+    flex-wrap: wrap;
 }
       
 .logo {
@@ -98,23 +97,17 @@ li a:hover::before{
     z-index: -1;   
 }
 
-li a:active {
-    background: #000;
-}
-
 .service {
     background: white;
 }
 
-
-
 .slide {
-    
     position: relative;
 }
 
 .video-bg {
     width: 100%;
+    height: 100%;
     pointer-events: none;
     margin-bottom: -5px;
     object-position: center;
@@ -123,7 +116,8 @@ li a:active {
 
 
 .overlay-video {
-    width: 700px;
+    max-width: 700px;
+    width: 100%;
     position: absolute;
     top: 50%;
     left:50%;
@@ -166,14 +160,14 @@ h3 {
 h3::after {
     content: "";
     display: block;
-    width: 100px;
+    max-width: 100px;
+    width: 100%;
     border-bottom: 6px solid rgb(255, 157, 11);
     transform: translateX(-50%);
     position: absolute;
     top: 120px;
     left: 50%;
 }
-
 
 .about {
     background-image: linear-gradient(to right, 
@@ -185,7 +179,6 @@ h3::after {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-
 }
 
 .company, .about-kom {
@@ -198,14 +191,16 @@ h3::after {
 }
 
 .about-foto {
-    display: flex;
+   display: flex;
    align-items: center;
 }
 
 .about-foto img {
-    height: 350px;
-    width: 500px;
-  }
+    max-height: 350px;
+    max-width: 500px;  
+    height: 100%;
+    width: 100%;
+}
 
 .about-block {
     margin: 0 0 0 50px; 
@@ -227,8 +222,10 @@ h3::after {
 .romb {
     display: block;
     content: '';
-    width: 100px;
-    height: 100px;
+    max-width: 100px;
+    max-height: 100px;
+    height: 100%;
+    width: 100%;
     transform: rotate(45deg);
     background: #f5a003;
     position: absolute;
@@ -239,8 +236,10 @@ h3::after {
 .romb::before {
     display: block;
     content: '';
-    width: 50px;
-    height: 50px;
+    max-width: 50px;
+    max-height: 50px;
+    height: 100%;
+    width: 100%;
     transform: rotate(-45deg);
     position: absolute;
     top: 25px;
@@ -260,8 +259,8 @@ h3::after {
 }
 
 .about-par {
-    margin:0;
-    padding: 10px 0;
+    margin:0 0 10px;;
+    padding: 10px 0 0 ;
     text-align: start;
 }
 
@@ -277,27 +276,30 @@ h3::after {
     display: flex;
     justify-content: space-around;
     padding-bottom: 50px;
+    flex-wrap: wrap;
 }
 
 .projects-item-1  img, 
 .projects-item-2  img, 
 .projects-item-3  img {
-    width: 300px;
-    height: 210px;
+    max-width: 300px;
+    max-height: 210px;
+    height: 100%;
+    width: 100%;
 }
 
 .projects-item-1, .projects-item-2, 
 .projects-item-3 {
-    width: 300px;
+    max-width: 300px;
+    width: 100%;
     background: rgba(233, 233, 233, 0.616);
-    /* border: 1px solid black; */
     transition: all 0.4s ease-out;
 }
 
 .projects-item-1:hover, .projects-item-2:hover, 
 .projects-item-3:hover {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-    transform: scale(1.05);
+    transform: scale(1.08);
 }
 
 .projects-par {
@@ -310,7 +312,8 @@ h3::after {
 .projects-par::after {
     content: "";
     display: block;
-    width: 60px;
+    max-width: 60px;
+    width: 100%;
     border-bottom: 6px solid rgb(255, 157, 11);
     transform: translateX(-50%);
     position: absolute;
@@ -333,7 +336,7 @@ h4 {
 .foto {
     background: rgba(245, 254, 255, 0.863);
     min-height: 830px;
-    
+    height: 100%;
 }
 
 .foto-wrap {
@@ -346,17 +349,18 @@ h4 {
 .gallery {
 	margin: 0 auto;
     max-width: 900px;
+    width: 100%;
 	position: relative; 
     line-height: 0; 	
 	background-size: auto 100%;
     background: no-repeat 50% 0; 
-    padding-top: 48%;
+    padding-top: 50%;
 } 
     
 .gallery label {
 	display: inline-block; 
 	min-width: 105px; 
-	min-height: 58px;
+    min-height: 58px;
 	margin-left: 3.5px;
 	background: no-repeat 50% 50%; 
 	background-size: calc(100% - 4px) calc(100% - 4px); 
@@ -427,17 +431,21 @@ input[name="img"] {
 }
 
 .partner-blur {
-    min-height: 400px;
+    min-height: 500px;
+    height: 100%;
     background-image: url(../img/tub.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     filter: blur(3px);
+    position: relative;
+
 }
 
 .partner-img { 
     max-width: 950px;
     width: 100%;
+    
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -458,9 +466,10 @@ input[name="img"] {
 .partner-baner  img{
     max-height: 100px;
     max-width: 150px;
+    height: 100%;
+    width: 100%;
     margin: 20px;
     filter: brightness(0.5);
-    /* width: 100%; */
 }
 
 .partner-baner img:hover{
@@ -493,6 +502,7 @@ input[name="img"] {
     display: flex;
     padding: 0 50px 50px;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
  
 .confir, .map {
@@ -500,7 +510,8 @@ input[name="img"] {
 } 
 
 .confir, textarea, .holder {
-    width: 280px;
+    max-width: 280px;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
 }
@@ -523,12 +534,12 @@ input[name="img"] {
 .button {
     display: block;
     margin: 0 auto;
-    padding: 22px 46px;
+    padding: 20px 30px;
     color: #ffffff;
     font-family: "Montserrat", serif;
     font-weight: 700;
     font-size: 18px;
-    border-radius: 2px;
+    border-radius: 8px;
     border: none;
     background: #fed136;
     letter-spacing: -0.025em;
@@ -560,8 +571,8 @@ input[name="img"] {
 }
 
 .socials {
-    width: 224px;
-    height: 60px;
+    max-width: 224px;
+    max-height: 60px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
